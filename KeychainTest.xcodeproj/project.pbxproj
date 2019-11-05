@@ -13,6 +13,7 @@
 		15D69E6B23718AEE0060CA32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D69E6923718AEE0060CA32 /* Main.storyboard */; };
 		15D69E6D23718AEF0060CA32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D69E6C23718AEF0060CA32 /* Assets.xcassets */; };
 		15D69E7023718AEF0060CA32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D69E6E23718AEF0060CA32 /* LaunchScreen.storyboard */; };
+		5D4212373E7011E6019A58D9 /* Pods_KeychainTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2085DF90D04A2239513620B8 /* Pods_KeychainTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		15D69E6C23718AEF0060CA32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D69E6F23718AEF0060CA32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15D69E7123718AEF0060CA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2085DF90D04A2239513620B8 /* Pods_KeychainTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeychainTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		308CF4A7DA9DF4AFD3B1B31C /* Pods-KeychainTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeychainTest.release.xcconfig"; path = "Target Support Files/Pods-KeychainTest/Pods-KeychainTest.release.xcconfig"; sourceTree = "<group>"; };
+		7CD3E99D7408560C7DB9ACCA /* Pods-KeychainTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeychainTest.debug.xcconfig"; path = "Target Support Files/Pods-KeychainTest/Pods-KeychainTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4212373E7011E6019A58D9 /* Pods_KeychainTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06686B579412987DEBE841EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2085DF90D04A2239513620B8 /* Pods_KeychainTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15D69E5723718AEE0060CA32 = {
 			isa = PBXGroup;
 			children = (
 				15D69E6223718AEE0060CA32 /* KeychainTest */,
 				15D69E6123718AEE0060CA32 /* Products */,
+				8C50D176125D0900EFFCAFFA /* Pods */,
+				06686B579412987DEBE841EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = KeychainTest;
 			sourceTree = "<group>";
 		};
+		8C50D176125D0900EFFCAFFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CD3E99D7408560C7DB9ACCA /* Pods-KeychainTest.debug.xcconfig */,
+				308CF4A7DA9DF4AFD3B1B31C /* Pods-KeychainTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D69E7423718AEF0060CA32 /* Build configuration list for PBXNativeTarget "KeychainTest" */;
 			buildPhases = (
+				DAA4D94600836BFA20FA448E /* [CP] Check Pods Manifest.lock */,
 				15D69E5C23718AEE0060CA32 /* Sources */,
 				15D69E5D23718AEE0060CA32 /* Frameworks */,
 				15D69E5E23718AEE0060CA32 /* Resources */,
+				426F3832D2FB8F8D424381F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		426F3832D2FB8F8D424381F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeychainTest/Pods-KeychainTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeychainTest/Pods-KeychainTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeychainTest/Pods-KeychainTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA4D94600836BFA20FA448E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeychainTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15D69E5C23718AEE0060CA32 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		15D69E7523718AEF0060CA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD3E99D7408560C7DB9ACCA /* Pods-KeychainTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		15D69E7623718AEF0060CA32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 308CF4A7DA9DF4AFD3B1B31C /* Pods-KeychainTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
