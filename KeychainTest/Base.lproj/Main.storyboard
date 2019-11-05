@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeychainTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Py-UX-L53">
+                                <rect key="frame" x="8" y="316.5" width="359" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzn-rM-Hhb">
+                                <rect key="frame" x="94" y="387" width="187" height="30"/>
+                                <state key="normal" title="Save Password to Keychain"/>
+                                <connections>
+                                    <action selector="savePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGX-sZ-PQo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9J-uF-Ttj">
+                                <rect key="frame" x="92" y="496" width="191" height="30"/>
+                                <state key="normal" title="Retrieve data from keychain"/>
+                                <connections>
+                                    <action selector="retrievePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7R8-u8-8Eb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S9J-uF-Ttj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="05e-eo-4u2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S9J-uF-Ttj" secondAttribute="bottom" constant="141" id="A9I-lY-v1i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Py-UX-L53" secondAttribute="trailing" constant="8" id="JNY-O6-g4L"/>
+                            <constraint firstItem="Xzn-rM-Hhb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aUz-w4-9ni"/>
+                            <constraint firstItem="S9J-uF-Ttj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGA-bk-26d"/>
+                            <constraint firstItem="9Py-UX-L53" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="but-xV-MjI"/>
+                            <constraint firstItem="S9J-uF-Ttj" firstAttribute="top" secondItem="Xzn-rM-Hhb" secondAttribute="bottom" constant="79" id="dmk-Lg-rlu"/>
+                            <constraint firstItem="9Py-UX-L53" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="yWE-i7-bdJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="9Py-UX-L53" id="w9J-xT-PmP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>
